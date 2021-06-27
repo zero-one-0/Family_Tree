@@ -24,6 +24,12 @@ Given an text file to run, the code will do the following
  - **Sister in Law**
  - **Brother in Law**
 
+### User Input File supported operations
+```sh
+ADD_CHILD "mother_name" "child_name" "child_gender"
+GET_RELATIONSHIP "name" "relationship"
+```
+
 ### Execution
 Use the following command to execute. _geektrust_ contains main function
 ```sh
