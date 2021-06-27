@@ -8,6 +8,19 @@ GET_RELATIONSHIP="GET_RELATIONSHIP"
 
 
 def read_initial_tree(dir=None):
+    '''
+    
+    Intialize the family tree with the given commands form the 
+    'family_tree.txt' file.
+
+    Supported Operations: 
+        - Add_HEAD
+        - ADD_CHILD
+        - ADD_PARTNER
+
+    params: dir (path to the initial textfile)
+
+    '''
     family = FamilyTree()
     if not dir:
         dir=os.getcwd()
@@ -26,6 +39,16 @@ def read_initial_tree(dir=None):
 
 
 def read_input(family, file):
+    '''
+    Read the inputfile containing the commands to perform operations.
+
+    Supported Operations: 
+        - ADD_CHILD
+        - GET_RELATIONSHIP
+    
+    params: family (a FamilyTree object), file (input file)
+
+    '''
     try:
         file = open(os.path.abspath(file), 'r')
     except Exception:
