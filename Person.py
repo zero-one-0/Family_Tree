@@ -35,7 +35,7 @@ class Person:
     
     def get_siblings(self):
         if self.mother:
-            return [c.name for c in self.mother.children if c.name!=self.name]
+            return [c for c in self.mother.children if c.name!=self.name]
         return None
     
     def get_partner_siblings(self, gender, name):
